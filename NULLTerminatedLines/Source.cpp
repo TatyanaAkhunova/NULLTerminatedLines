@@ -1,20 +1,20 @@
-#include<iostream>
+п»ї#include<iostream>
 #include<Windows.h>
 #include<stdio.h>
 
 using namespace std;
 
-int StringLength(const char str[]); //Возвращает длину строки в символах
-char* to_upper(char str[]); //Переводит строку в верхний регистр
-char* to_lower(char str[]); //Переводит строку в верхний регистр
-char* shrink(char str[]);//Удаляет лишние пробелы из предложения
-int is_palindrome(const char str[]); //Проверяет, является ли строка палиндромом
-int is_int_number(const char str[]); //Проверяет, является ли строка целым десятичным числом
-int to_int_number(const char str[]); //Если строка является целым десятичным числом, возвращает ее числовое значение
-int is_bin_number(const char str[]); //Проверяет, является ли строка двоичным числом
-int is_bin_to_dec(char str[]); //Если строка является двоичным числом, возвращает ее десятичное значение
-int is_hex_number(const char str[]);// Проверяет, является ли строка шестнадцатиричным числом
-int bin_to_dec(char str[]); //Если строка является шестнадцатиричным числом, возвращает ее десятичное значение
+int StringLength(const char str[]); //Р’РѕР·РІСЂР°С‰Р°РµС‚ РґР»РёРЅСѓ СЃС‚СЂРѕРєРё РІ СЃРёРјРІРѕР»Р°С…
+char* to_upper(char str[]); //РџРµСЂРµРІРѕРґРёС‚ СЃС‚СЂРѕРєСѓ РІ РІРµСЂС…РЅРёР№ СЂРµРіРёСЃС‚СЂ
+char* to_lower(char str[]); //РџРµСЂРµРІРѕРґРёС‚ СЃС‚СЂРѕРєСѓ РІ РІРµСЂС…РЅРёР№ СЂРµРіРёСЃС‚СЂ
+char* shrink(char str[]);//РЈРґР°Р»СЏРµС‚ Р»РёС€РЅРёРµ РїСЂРѕР±РµР»С‹ РёР· РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+int is_palindrome(const char str[]); //РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° РїР°Р»РёРЅРґСЂРѕРјРѕРј
+int is_int_number(const char str[]); //РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° С†РµР»С‹Рј РґРµСЃСЏС‚РёС‡РЅС‹Рј С‡РёСЃР»РѕРј
+int to_int_number(const char str[]); //Р•СЃР»Рё СЃС‚СЂРѕРєР° СЏРІР»СЏРµС‚СЃСЏ С†РµР»С‹Рј РґРµСЃСЏС‚РёС‡РЅС‹Рј С‡РёСЃР»РѕРј, РІРѕР·РІСЂР°С‰Р°РµС‚ РµРµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
+int is_bin_number(const char str[]); //РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° РґРІРѕРёС‡РЅС‹Рј С‡РёСЃР»РѕРј
+int is_bin_to_dec(char str[]); //Р•СЃР»Рё СЃС‚СЂРѕРєР° СЏРІР»СЏРµС‚СЃСЏ РґРІРѕРёС‡РЅС‹Рј С‡РёСЃР»РѕРј, РІРѕР·РІСЂР°С‰Р°РµС‚ РµРµ РґРµСЃСЏС‚РёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
+int is_hex_number(const char str[]);// РџСЂРѕРІРµСЂСЏРµС‚, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° С€РµСЃС‚РЅР°РґС†Р°С‚РёСЂРёС‡РЅС‹Рј С‡РёСЃР»РѕРј
+int bin_to_dec(char str[]); //Р•СЃР»Рё СЃС‚СЂРѕРєР° СЏРІР»СЏРµС‚СЃСЏ С€РµСЃС‚РЅР°РґС†Р°С‚РёСЂРёС‡РЅС‹Рј С‡РёСЃР»РѕРј, РІРѕР·РІСЂР°С‰Р°РµС‚ РµРµ РґРµСЃСЏС‚РёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
 
 void main()
 {
@@ -22,19 +22,19 @@ void main()
 	cout << (int)'a' << endl;
 	cout << 'A' - 'a' << endl;
 	//setlocale(LC_ALL, "");
-	system("chcp 1251"); //- через команду в консоль
+	system("chcp 1251"); //- С‡РµСЂРµР· РєРѕРјР°РЅРґСѓ РІ РєРѕРЅСЃРѕР»СЊ
 	//char str[] = { 'H', 'e', 'l', 'l', 'o', 0 };
 	//char str[] = "Hello";
 
 	const int SIZE = 256;
 	//char str[SIZE] = "Hello World";
-	char str[SIZE] = "Хорошо       живет        на        свете      Винни         Пух";
+	char str[SIZE] = "РҐРѕСЂРѕС€Рѕ       Р¶РёРІРµС‚        РЅР°        СЃРІРµС‚Рµ      Р’РёРЅРЅРё         РџСѓС…";
 
 	cout << str << endl;
 	/*str[5] = 0;
 	cout << str << endl;*/
 
-	//cout << "Введите строку: ";
+	//cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: ";
 
 	//SetConsoleCP(1251);
 	//cin >> str;
@@ -42,8 +42,8 @@ void main()
 	//cin.getline(str, SIZE);
 	
 	//SetConsoleCP(866);
-	//cout << "Вы ввели строку размером: " << StringLength(str) << " символов" << endl;
-	cout << "Вы ввели строку размером: " << strlen(str) << " символов" << endl;
+	//cout << "Р’С‹ РІРІРµР»Рё СЃС‚СЂРѕРєСѓ СЂР°Р·РјРµСЂРѕРј: " << StringLength(str) << " СЃРёРјРІРѕР»РѕРІ" << endl;
+	cout << "Р’С‹ РІРІРµР»Рё СЃС‚СЂРѕРєСѓ СЂР°Р·РјРµСЂРѕРј: " << strlen(str) << " СЃРёРјРІРѕР»РѕРІ" << endl;
 	//to_upper(str);
 	//cout <<to_upper (str) << endl;
 	//cout << to_lower(str) << endl; 
@@ -64,7 +64,7 @@ char* to_upper(char str[])
 	for (int i = 0; str[i]; i++)
 	{
 		if(str[i]>='a'&& str[i]<='z')str[i] -= 32;
-		if(str[i]>='а'&& str[i]<='я')str[i] -= 32;
+		if(str[i]>='Р°'&& str[i]<='СЏ')str[i] -= 32;
 		//str[i]=toupper(str[i]);
 	}
 	return str;
@@ -74,7 +74,7 @@ char* to_lower(char str[])
 	for (int i = 0; str[i]; i++)
 	{
 		if(str[i]>='A'&& str[i]<='Z')str[i] += 32;
-		if(str[i]>='А'&& str[i]<='Я')str[i] += 32;
+		if(str[i]>='Рђ'&& str[i]<='РЇ')str[i] += 32;
 		//str[i] = tolower(str[i]);
 	}
 	return str;
